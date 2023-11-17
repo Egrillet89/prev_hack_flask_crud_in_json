@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form method="POST" action="http://localhost:5000/add">
+            <section>
+                <label>email</label>
+                <input type="email" name="email" placeholder="example@domain.com"/>
+            </section>
+            <br>
+            <section>
+                <label>name</label>
+                <input type="text" name="name" placeholder="add a name"/>
+            </section>
+            <br>
+            <section>
+                <label>age</label>
+                <input type="text" name="age" placeholder="add an age"/>
+            </section>
+            <br>
+            <section>
+                <input type="submit" value="add user">
+            </section>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <form method="POST" action="http://localhost:5000/find">
+            <section>
+                <label>email</label>
+                <input type="email" name="email" placeholder="example@domain.com"/>
+            </section>
+            <br>
+            <section>
+                <input type="submit" value="find user">
+            </section>
+        </form>
+    </div>
+</body>
+</html>
