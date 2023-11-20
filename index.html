@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div>
+        <H1>New User</H1>
         <form method="POST" action="http://localhost:5000/add">
             <section>
                 <label>email</label>
@@ -29,9 +31,9 @@
         </form>
     </div>
     <br>
-    <hr>
     <br>
     <div>
+        <H1>Find User</H1>
         <form method="POST" action="http://localhost:5000/find">
             <section>
                 <label>email</label>
@@ -40,6 +42,46 @@
             <br>
             <section>
                 <input type="submit" value="find user">
+            </section>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        <H1>Delete User</H1>
+        <form method="POST" action="http://localhost:5000/delete">
+            <section>
+                <label>email</label>
+                <input type="email" name="email" placeholder="example@domain.com"/>
+            </section>
+            <br>
+            <section>
+                <input type="submit" value="Delete User">
+            </section>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        <H1>Update User</H1>
+        <form method="POST" action="http://localhost:5000/update">
+            <section>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="example@domain.com"/>
+            </section>
+            <br>
+            <section>
+                <label>Nombre</label>
+                <input type="text" name="name" placeholder="Nombre"/>
+            </section>
+            <br>
+            <section>
+                <label>Edad</label>
+                <input type="number" name="age" placeholder="Edad"/>
+            </section>
+            <br>
+            <section>
+                <input type="submit" value="Actualizar perfil">
             </section>
         </form>
     </div>
