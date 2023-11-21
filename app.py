@@ -55,14 +55,18 @@ def fn_find():
 @app.route("/delete", methods=["POST"])
 def fn_delete():
     email = request.form["email"]
+
     with open("data.json", "r") as f:
         data = json.load(f)
-    for i in range(len(data)):
-        if data[i]["email"] == email:
-            del data[i]
+
+    for item in range(len(data)):
+        if data[item]["email"] == email:
+            del data[item]
             break
+
     with open("data.json", "w") as f:
         json.dump(data, f)
+
     return jsonify({
         "payload":"deleted"
     })
@@ -72,15 +76,19 @@ def fn_update():
     email = request.form["email"]
     name = request.form["name"]
     age = request.form["age"]
+
     with open("data.json", "r") as f:
         data = json.load(f)
-    for i in range(len(data)):
-        if data[i]["email"] == email:
-            data[i]["name"] = name
-            data[i]["age"] = age
+
+    for item in range(len(data)):
+        if data[item]["email"] == email:
+            data[item]["name"] = name
+            data[item]["age"] = age
             break
+
     with open("data.json", "w") as f:
         json.dump(data, f)
+        
     return jsonify({
         "payload":"update"
     })
